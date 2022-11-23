@@ -55,15 +55,22 @@
     background-color: cornflowerblue;
     
 }
-.get{
+.getFail{
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: cornflowerblue;
+    background-color: rgb(255, 1, 1);
 }
+
 .status{
     width: 25px;
     height: 25px;
     border-radius: 50%;
     background-color: cornflowerblue;
+}
+.getSuccess{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(9, 255, 1);
 }

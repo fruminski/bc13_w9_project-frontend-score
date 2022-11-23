@@ -2,6 +2,7 @@ import React from "react";
 import "./ListElementTEST.css";
 
 function ListElement(props) {
+  
   const Collapse = ({ collapsed, children }) => {
     const [isCollapsed, setIsCollapsed] = React.useState(!collapsed);
 
@@ -41,7 +42,7 @@ function ListElement(props) {
       <div className="icons-container">
         <div className="ping"></div>
         <p>PING</p>
-        <div className="get"></div>
+        <div className={props.api_status ? 'getSuccess' : 'getFail'} ></div>
         <p>GET</p>
         <div className="status"></div>
         <p>200</p>
