@@ -34,7 +34,7 @@ function ListElement(props) {
           </a>
           <div>{props.jsonExample}</div>
           <a href={props.docsUrl}>
-            <p>Documentation</p>
+            <button>Link to documentation</button>
           </a>
         </Collapse>
       </div>
