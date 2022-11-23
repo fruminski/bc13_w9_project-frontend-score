@@ -4,6 +4,7 @@ import ListOfApis from "../ListOfApis/ListOfApis";
 import { useEffect } from "react";
 import "./App.css";
 import AddApi from "../AddApi/AddApi";
+import AddButton from "../Button/Button"
 
 function App() {
   useEffect(() => {
@@ -18,7 +19,11 @@ function App() {
   return (
     <div className="app-container">
       <Header />
-      <AddApi />
+      <AddButton />
+      <AddApi InputName="URL link" Placeholder="Enter your URL link here"/>
+      <AddApi APIname="API name" InputName="API name" Placeholder="Enter your API name here"/>
+      <AddApi APIname="Link to the docs" InputName="Docs link" Placeholder="Enter the link to the Docs here"/>
+      <AddApi InputName="Tags" Placeholder="Enter the tags here"/>
       <ListOfApis />
     </div>
   );

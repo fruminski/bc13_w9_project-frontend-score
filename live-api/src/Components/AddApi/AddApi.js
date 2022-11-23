@@ -1,15 +1,15 @@
 import React from "react";
 import "./AddApi.css";
 
-function AddApi() {
+function AddApi(props) {
   return (
     <div className="add-api-container">
+      <label for={props.APIname}>{props.InputName}</label>
       <input
         type="text"
         className="input"
-        placeholder="paste in your API url"
+        placeholder={props.Placeholder}
       ></input>
-      <button>Add An API</button>
     </div>
   );
 }
