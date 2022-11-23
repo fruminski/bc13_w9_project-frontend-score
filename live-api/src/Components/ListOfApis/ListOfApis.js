@@ -12,6 +12,8 @@ function ListOfApis(props) {
             apiUrl={element.api_url}
             jsonExample={element.json} // jsonExample=<pre>{JSON.stringify(element, null, 2)}</pre>
             docsUrl={element.doclink}
+            response_code={element.response_code}
+            get={element.get}
           />
         );
       })}

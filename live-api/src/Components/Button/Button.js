@@ -1,11 +1,11 @@
 import React from "react";
 import "./Button.css";
 
-function AddButton() {
-return(
-<div>
-<button>Add An API</button>
-</div>
-)
+function AddButton(props) {
+  return (
+    <div>
+      <button onClick={props.handleClick}>Add An API</button>
+    </div>
+  );
 }
-export default AddButton
+export default AddButton;

@@ -4,12 +4,15 @@ import "./AddApi.css";
 function AddApi(props) {
   return (
     <div className="add-api-container">
-      <label for={props.APIname}>{props.InputName}</label>
-      <input
-        type="text"
-        className="input"
-        placeholder={props.Placeholder}
-      ></input>
+      <form>
+        <label for={props.APIname}>{props.InputName}</label>
+        <input
+          type="text"
+          className="input"
+          placeholder={props.Placeholder}
+          onChange={props.handleChange}
+        ></input>
+      </form>
     </div>
   );
 }

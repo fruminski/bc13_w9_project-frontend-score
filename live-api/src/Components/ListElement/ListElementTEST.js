@@ -41,10 +41,10 @@ function ListElement(props) {
       <div className="icons-container">
         <div className="ping"></div>
         <p>PING</p>
-        <div className={props.api_status ? "getSuccess" : "getFail"}></div>
+        <div className={props.get ? "getSuccess" : "getFail"}></div>
         <p>GET</p>
-        <div className="status"></div>
-        <p>200</p>
+        <div className={props.get ? "getSuccess" : "getFail"}></div>
+        <p>{props.response_code}</p>
       </div>
     </div>
   );
