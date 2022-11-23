@@ -4,8 +4,9 @@ import ListOfApis from "../ListOfApis/ListOfApis";
 import { useEffect, useState } from "react";
 import "./App.css";
 import AddApi from "../AddApi/AddApi";
-// import ListElement from "../ListElement/ListElement";
 import ListElementTEST from "../ListElement/ListElementTEST";
+import AddButton from "../Button/Button"
+
 
 function App() {
   const [apiName, setApiName] = useState("");
@@ -28,6 +29,7 @@ function App() {
   return (
     <div className="app-container">
       <Header />
+
       <AddApi />
       <ListOfApis>
         <ListElementTEST
@@ -41,17 +43,15 @@ function App() {
           jsonExample=<pre>{jsonExample}</pre>
         />
 
-        {/* <ListElement
-          apiName={apiName}
-          apiUrl={apiUrl}
-          jsonExample={jsonExample}
-        />
-        <ListElement
-          apiName={apiName}
-          apiUrl={apiUrl}
-          // jsonExample={jsonExample}
-        /> */}
       </ListOfApis>
+
+      <AddButton />
+      <AddApi InputName="URL link" Placeholder="Enter your URL link here"/>
+      <AddApi APIname="API name" InputName="API name" Placeholder="Enter your API name here"/>
+      <AddApi APIname="Link to the docs" InputName="Docs link" Placeholder="Enter the link to the Docs here"/>
+      <AddApi InputName="Tags" Placeholder="Enter the tags here"/>
+      <ListOfApis />
+
     </div>
   );
 }
