@@ -2,7 +2,6 @@ import React from "react";
 import "./ListElementTEST.css";
 
 function ListElement(props) {
-  
   const Collapse = ({ collapsed, children }) => {
     const [isCollapsed, setIsCollapsed] = React.useState(!collapsed);
 
@@ -33,7 +32,7 @@ function ListElement(props) {
           <a href={props.apiUrl}>
             <p>{props.apiUrl}</p>
           </a>
-          <div>{props.jsonExample}</div>
+          <div>{JSON.stringify(JSON.parse(props.jsonExample))}</div>
           <a href={props.docsUrl}>
             <button>Link to documentation</button>
           </a>
@@ -42,7 +41,7 @@ function ListElement(props) {
       <div className="icons-container">
         <div className="ping"></div>
         <p>PING</p>
-        <div className={props.api_status ? 'getSuccess' : 'getFail'} ></div>
+        <div className={props.api_status ? "getSuccess" : "getFail"}></div>
         <p>GET</p>
         <div className="status"></div>
         <p>200</p>

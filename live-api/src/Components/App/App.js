@@ -14,14 +14,15 @@ function App() {
   useInterval(() => {
     // Your custom logic here
     setCount(count + 1);
-  }, 30000); // passing null instead of 1000 will cancel the interval if it is already running
+  }, 300000); // passing null instead of 1000 will cancel the interval if it is already running
 
   useEffect(() => {
     async function getData() {
       const response = await fetch("http://localhost:3001/api/");
       const data = await response.json();
       setApiArray(data.payload);
-      console.log(apiArray);
+
+      // console.log(JSON.parse(apiArray[0].json));
     }
     getData();
   }, [count]);

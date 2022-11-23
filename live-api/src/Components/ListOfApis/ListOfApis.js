@@ -10,7 +10,7 @@ function ListOfApis(props) {
             key={element.api_id}
             apiName={element.api_name}
             apiUrl={element.api_url}
-            jsonExample=<pre>{JSON.stringify(element, null, 2)}</pre>
+            jsonExample={element.json} // jsonExample=<pre>{JSON.stringify(element, null, 2)}</pre>
             docsUrl={element.doclink}
           />
         );
