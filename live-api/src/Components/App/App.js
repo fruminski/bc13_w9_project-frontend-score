@@ -32,17 +32,21 @@ function App() {
   }, [count]);
 
   useEffect(() => {
+    /* If the add button was clicked we're here*/
+
+    // AND if there was data in the input fields */
     if (JSON.stringify(newApi) !== "{}") {
       async function postData() {
+        /* we post to the API with the data in the fields */
         const response = await fetch("http://localhost:3001/api/", {
           method: "POST",
           body: JSON.stringify(newApi)
         });
-        const data = await response.json();
+       // const data = await response.json();
 
-        console.log(data.payload);
-        const newApiArray = [...apiArray, data.payload];
-        setApiArray(newApiArray);
+    //    console.log("useEffect() payload: ",data.payload);
+     //   const newApiArray = [...apiArray, data.payload];
+     //   setApiArray(newApiArray);
       }
       postData();
     }
@@ -61,6 +65,7 @@ function App() {
   }
 
   function handleClick() {
+    console.log("handleClick(): ",url, apiName, docsLink);
     setNewApi({ api_url: url, api_name: apiName, doclink: docsLink });
   }
 
