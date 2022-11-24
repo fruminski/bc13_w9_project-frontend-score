@@ -13,4 +13,5 @@
 
 .button:hover{
     background: rgba(112, 133, 149, 0.874);
+    cursor: pointer;
 }

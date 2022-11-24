@@ -14,6 +14,7 @@ function ListOfApis(props) {
             docsUrl={element.doclink}
             response_code={element.response_code}
             get={element.get}
+            handleDelete={props.handleDelete}
           />
         );
       })}

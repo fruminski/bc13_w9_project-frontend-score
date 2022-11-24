@@ -75,6 +75,8 @@ function App() {
     setNewApi({ api_url: url, api_name: apiName, doclink: docsLink });
   }
 
+  function handleDelete(id) {}
+
   console.log(newApi);
   return (
     <div className="app-container">
@@ -103,11 +105,14 @@ function App() {
           </div>
 
           <div className="add-button-container">
-            <AddButton className="button" chandleClick={handleClick} />
+            <AddButton className="button" handleClick={handleClick} />
           </div>
         </div>
 
-        <ListOfApis apiArray={apiArray}></ListOfApis>
+        <ListOfApis
+          apiArray={apiArray}
+          handleDelete={handleDelete}
+        ></ListOfApis>
       </div>
     </div>
   );

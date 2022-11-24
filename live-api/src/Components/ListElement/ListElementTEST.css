@@ -1,28 +1,52 @@
-.button-parent {
-    display: flex;
-}
+
 
 .collapse-button {
     display: block;
     width: 100%;
+    background-color: rgb(225, 240, 247);
+    padding: 5px;
+    border-radius: 5px;
+    border: 0px;
+    box-shadow: -1px 1px 5px 0px rgba(111,148,207,0.75);
+    -webkit-box-shadow: -1px 1px 5px 0px rgba(111,148,207,0.75);
+    -moz-box-shadow: -1px 1px 5px 0px rgba(111,148,207,0.75);
   }
   
   .collapse-content.collapsed {
     display: none;
   }
   
-  .collapsed-content.expanded {
+  .expanded {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    gap: 20px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 0px;
+    box-shadow: -1px 1px 5px 0px rgba(111,148,207,0.75);
+    -webkit-box-shadow: -1px 1px 5px 0px rgba(111,148,207,0.75);
+    -moz-box-shadow: -1px 1px 5px 0px rgba(111,148,207,0.75);
+    
   }
+
+  .expanded *{
+    background: rgb(225, 240, 247);
+    padding: 5px;
+    border-radius: 5px;
+    max-height: 200px;
+    font-size: 12px;
+    text-decoration: none;
+    overflow: hidden;
+  }
+
+  
 
   .list-element-container{
     display: flex;
     width: 60vw;
     justify-content: space-between;
     align-items: center;
-    background-color: gray;
+    background:rgba(55, 73, 88, 0.673);
     
     padding: 1em;
     gap: 1em;
@@ -45,6 +69,9 @@
 
 .left-container{
     width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .icons-container{
@@ -64,30 +91,49 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: rgb(255, 1, 1);
+    background: rgb(219, 76, 76);
+background: radial-gradient(circle, rgb(189, 55, 55) 22%, rgba(205,47,47,1) 47%, rgba(255,255,255,0.6026785714285714) 80%);
 }
 
-.status{
+/* .status{
     width: 25px;
     height: 25px;
     border-radius: 50%;
     background-color: cornflowerblue;
-}
+} */
 .getSuccess{
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: rgb(9, 255, 1);
+    background: rgb(39,195,65);
+background: radial-gradient(circle, rgba(39,195,65,1) 0%, rgba(88,215,12,1) 25%, rgba(10,187,40,0.6026785714285714) 43%, rgba(255,255,255,1) 69%);
 }
 
 .delete {
     width: auto;
     padding: 2px;
     align-self: flex-start;
+    padding: 4px;
+    border-radius: 5px;
+    border: 0px;
+    box-shadow: -1px 1px 5px 0px rgba(111,148,207,0.75);
+    -webkit-box-shadow: -1px 1px 5px 0px rgba(111,148,207,0.75);
+    -moz-box-shadow: -1px 1px 5px 0px rgba(111,148,207,0.75);
 }
 
 .docslink {
     width: auto;
     padding: 4px;
     margin: 2px;
+    border: none;
+}
+
+.docslink:hover{
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.icons-container{
+    color: rgb(204, 209, 212);
 }
