@@ -6,6 +6,26 @@
 }
 
 .app-container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* text-align: center; */
 }
 
+.add-container{
+  display: flex;
+  width: 60vw;
+  justify-content: space-between;
+
+}
+
+.inputs-container{
+  width: 65%;
+}
+
+.add-button-container{
+  width: 25%;
+  height: 100%;
+}

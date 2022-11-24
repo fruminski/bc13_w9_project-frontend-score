@@ -5,13 +5,17 @@ function AddApi(props) {
   return (
     <div className="add-api-container">
       <form>
-        <label for={props.APIname}>{props.InputName}</label>
-        <input
-          type="text"
-          className="input"
-          placeholder={props.Placeholder}
-          onChange={props.handleChange}
-        ></input>
+        <div className="label-container">
+          <label for={props.APIname}>{props.InputName}</label>
+        </div>
+        <div className="input-container">
+          <input
+            type="text"
+            className="input"
+            placeholder={props.Placeholder}
+            onChange={props.handleChange}
+          ></input>
+        </div>
       </form>
     </div>
   );

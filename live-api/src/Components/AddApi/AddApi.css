@@ -1,11 +1,31 @@
 .add-api-container{
-    width: 60vw;
+    /* width: 60vw; */
     margin: 0 auto;
+    
 }
 
 .input {
-    width: 90%
+    width: 100%
 }
 button {
     width: 10%;
 }
+
+label{
+    width: 50px;
+}
+
+form {
+    display: flex;
+}
+
+.label-container{
+    width: 10%;
+}
+.input-container{
+    width: 90%;
+}
+
+/* .input{
+    width: 100%;
+} */

@@ -31,22 +31,22 @@ function App() {
     getData();
   }, [count]);
 
-  useEffect(() => {
-    if (JSON.stringify(newApi) !== "{}") {
-      async function postData() {
-        const response = await fetch("http://localhost:3001/api/", {
-          method: "POST",
-          body: JSON.stringify(newApi)
-        });
-        const data = await response.json();
+  // useEffect(() => {
+  //   if (JSON.stringify(newApi) !== "{}") {
+  //     async function postData() {
+  //       const response = await fetch("http://localhost:3001/api/", {
+  //         method: "POST",
+  //         body: JSON.stringify(newApi)
+  //       });
+  //       const data = await response.json();
 
-        console.log(data.payload);
-        const newApiArray = [...apiArray, data.payload];
-        setApiArray(newApiArray);
-      }
-      postData();
-    }
-  }, [newApi]);
+  //       console.log(data.payload);
+  //       const newApiArray = [...apiArray, data.payload];
+  //       setApiArray(newApiArray);
+  //     }
+  //     postData();
+  //   }
+  // }, [newApi]);
 
   function handleChangeUrl(e) {
     setUrl(e.target.value);
@@ -68,26 +68,33 @@ function App() {
   return (
     <div className="app-container">
       <Header />
+      <div className="add-container">
+        <div className="inputs-container">
+          <AddApi
+            InputName="URL"
+            Placeholder="Enter your URL link here"
+            handleChange={handleChangeUrl}
+          />
+          <AddApi
+            APIname="API name"
+            InputName="API"
+            Placeholder="Enter your API name here"
+            handleChange={handleChangeName}
+          />
+          <AddApi
+            APIname="Link to the docs"
+            InputName="DOC"
+            Placeholder="Enter the link to the Docs here"
+            handleChange={handleChangeDocs}
+          />
+          <AddApi InputName="TAG" Placeholder="Enter the tags here" />
+        </div>
 
-      <AddButton handleClick={handleClick} />
-      <AddApi
-        InputName="URL link"
-        Placeholder="Enter your URL link here"
-        handleChange={handleChangeUrl}
-      />
-      <AddApi
-        APIname="API name"
-        InputName="API name"
-        Placeholder="Enter your API name here"
-        handleChange={handleChangeName}
-      />
-      <AddApi
-        APIname="Link to the docs"
-        InputName="Docs link"
-        Placeholder="Enter the link to the Docs here"
-        handleChange={handleChangeDocs}
-      />
-      <AddApi InputName="Tags" Placeholder="Enter the tags here" />
+        <div className="add-button-container">
+          <AddButton handleClick={handleClick} />
+        </div>
+      </div>
+
       <ListOfApis apiArray={apiArray}></ListOfApis>
     </div>
   );
