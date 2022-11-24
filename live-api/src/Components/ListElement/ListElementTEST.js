@@ -29,11 +29,11 @@ function ListElement(props) {
     <div className="list-element-container" id={props.id}>
       <div className="left-container">
         <Collapse>
-          <a href={props.apiUrl}>
+          <a href={props.apiUrl} target="_blank">
             <p>{props.apiUrl}</p>
           </a>
           <div>{JSON.stringify(JSON.parse(props.jsonExample))}</div>
-          <a href={props.docsUrl}>
+          <a href={props.docsUrl} target="_blank">
             <button className="docslink">Link to documentation</button>
           </a>
         </Collapse>
@@ -45,7 +45,7 @@ function ListElement(props) {
           props.handleDelete(props.id);
         }}
       >
-        🚫
+        ❌
       </button>
       <div className="icons-container">
         {/* <div className={props.get ? "getSuccess" : "getFail"}></div>
