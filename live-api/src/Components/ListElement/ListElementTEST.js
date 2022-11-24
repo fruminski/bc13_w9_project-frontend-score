@@ -39,7 +39,7 @@ function ListElement(props) {
         </Collapse>
       </div>
       <div className="icons-container">
-        <div className="ping"></div>
+        <div className={props.get ? "getSuccess" : "getFail"}></div>
         <p>PING</p>
         <div className={props.get ? "getSuccess" : "getFail"}></div>
         <p>GET</p>

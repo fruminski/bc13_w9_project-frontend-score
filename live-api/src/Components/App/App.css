@@ -11,13 +11,14 @@
   justify-content: center;
   align-items: center;
 
-  /* text-align: center; */
+  text-align: center;
 }
 
 .add-container{
   display: flex;
   width: 60vw;
   justify-content: space-between;
+
 
 }
 
@@ -28,4 +29,12 @@
 .add-button-container{
   width: 25%;
   height: 100%;
+  align-self: center;
+}
+
+.add-and-list-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
 }
