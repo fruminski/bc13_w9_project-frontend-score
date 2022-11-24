@@ -1,9 +1,10 @@
 .header-container{
     display: flex;
     flex-direction: column;
-    height: 20vh;
+    height: 30vh;
     align-items: center;
-    gap: 3vh;
+    justify-content: space-around;
+    /* gap: 5vh; */
     
 }
 
@@ -13,9 +14,24 @@ h1{
     line-height: 10vh;
     color: white;
     font-size: 3em;
+    opacity: 1;
+    animation: appear ease-in 2s 0s;
+    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 0px 4px -26px rgba(158,158,158,0.4); 
+box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 0px 4px -26px rgba(158,158,158,0.4);
+}
+
+@keyframes appear{
+    0% {opacity: 0}
+    100%{opacity: 1}
 }
 
 .header-container p{
-    width: 60vw;
+    width: 40vw;
     color: white;
+    font-size: 1.5em;
+    
+    padding: 10px;
+   
+    
 }
+

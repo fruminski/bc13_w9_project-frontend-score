@@ -25,10 +25,12 @@
 .app-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   text-align: center;
-  background: var(--gradient-top);
+  
+  gap: 5vh;
+  
 }
 
 .add-container{

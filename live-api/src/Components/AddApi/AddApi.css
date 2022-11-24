@@ -1,11 +1,16 @@
 .add-api-container{
     /* width: 60vw; */
     margin: 0 auto;
+    padding: 2px;
     
 }
 
 .input {
-    width: 100%
+    width: 100%;
+    padding: 4px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(225, 240, 247);
 }
 button {
     width: 10%;
@@ -13,11 +18,13 @@ button {
 
 label{
     width: 50px;
+    color: rgb(199, 234, 237);
     
 }
 
 form {
     display: flex;
+    
 }
 
 .label-container{

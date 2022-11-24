@@ -5,7 +5,7 @@ function AddButton(props) {
   return (
     <div>
       <button className={props.className} onClick={props.handleClick}>
-        Add An API
+        ADD API
       </button>
     </div>
   );
