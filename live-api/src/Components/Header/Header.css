@@ -1,21 +1,56 @@
-.header-container{
+.header-container {
     display: flex;
     flex-direction: column;
-    height: 20vh;
+    height: 30vh;
     align-items: center;
-    gap: 3vh;
-    
+    justify-content: space-around;
+    /* gap: 5vh; */
+
 }
 
-h1{
-    background-color: gray;
+h1 {
+    background-color: rgba(0, 0, 0, 0.321);
     width: 100vw;
     line-height: 10vh;
     color: white;
     font-size: 3em;
+    opacity: 1;
+    animation: appear ease-in 1s 0s;
+    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 0px 4px -26px rgba(158, 158, 158, 0.4);
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 0px 4px -26px rgba(158, 158, 158, 0.4);
 }
 
-.header-container p{
-    width: 60vw;
-    background-color: gray;
+@keyframes appear {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.header-container img {
+    width: 40px;
+    transform: rotate(0deg);
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.header-container p {
+    width: 30vw;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px;
+    transform: translateX(-50%, -50%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }

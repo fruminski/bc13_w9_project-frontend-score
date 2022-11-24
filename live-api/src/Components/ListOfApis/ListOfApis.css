@@ -3,4 +3,10 @@
     flex-direction: column;
     align-items: center;
     gap: 2px;
+    background-color: rgba(55, 73, 88, 0.673);
+    padding: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 5px 0px #00000098, inset 4px 4px 15px 0px #00000090, 5px 0px 4px -26px rgba(158,158,158,0.4); 
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #00000094, 5px 0px 4px -26px rgba(158,158,158,0.4);
+
 }
