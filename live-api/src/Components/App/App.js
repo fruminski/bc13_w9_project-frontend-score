@@ -14,6 +14,7 @@ function App() {
   const [url, setUrl] = useState("");
   const [apiName, setApiName] = useState("");
   const [docsLink, setDocsLink] = useState("");
+  const [del, setDel] = useState("");
 
   useInterval(() => {
     // Your custom logic here
@@ -25,15 +26,12 @@ function App() {
       const response = await fetch("http://localhost:3001/api/");
       const data = await response.json();
       setApiArray(data.payload);
-
-      // console.log(JSON.parse(apiArray[0].json));
     }
     getData();
   }, [count]);
 
   useEffect(() => {
     /* If the add button was clicked we're here*/
-
     // AND if there was data in the input fields */
     if (JSON.stringify(newApi) !== "{}") {
       async function postData() {
@@ -48,15 +46,31 @@ function App() {
             "Content-Type": "application/json"
           }
         });
-        // const data = await response.json();
-
-        //    console.log("useEffect() payload: ",data.payload);
-        //   const newApiArray = [...apiArray, data.payload];
-        //   setApiArray(newApiArray);
       }
       postData();
+      setCount(count+1)
     }
   }, [newApi]);
+
+  useEffect(() => {
+    async function deleteApi() {
+      console.log('id:', del)
+      const response = await fetch(`http://localhost:3001/api/${del}`, {
+        method: "DELETE",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+    }
+    deleteApi(); 
+    setCount(count+1)
+  }, [del]);
+
+  function handleDelete(id) {
+    setDel(id);
+    console.log(id);
+  }
 
   function handleChangeUrl(e) {
     setUrl(e.target.value);
@@ -74,8 +88,6 @@ function App() {
     console.log("handleClick(): ", url, apiName, docsLink);
     setNewApi({ api_url: url, api_name: apiName, doclink: docsLink });
   }
-
-  function handleDelete(id) {}
 
   console.log(newApi);
   return (

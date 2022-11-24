@@ -26,7 +26,7 @@ function ListElement(props) {
   };
 
   return (
-    <div className="list-element-container" id={props.key}>
+    <div className="list-element-container" id={props.id}>
       <div className="left-container">
         <Collapse>
           <a href={props.apiUrl}>
@@ -39,10 +39,10 @@ function ListElement(props) {
         </Collapse>
       </div>
       <button
-        id={props.key}
+        id={props.id}
         className="delete"
         onClick={() => {
-          props.handleDelete(props.key);
+          props.handleDelete(props.id);
         }}
       >
         🚫
