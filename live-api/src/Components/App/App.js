@@ -37,10 +37,15 @@ function App() {
     // AND if there was data in the input fields */
     if (JSON.stringify(newApi) !== "{}") {
       async function postData() {
+        const newApiJson = JSON.stringify(newApi)
+        console.log(newApiJson)
         /* we post to the API with the data in the fields */
         const response = await fetch("http://localhost:3001/api/", {
           method: "POST",
-          body: JSON.stringify(newApi)
+          body: newApiJson,
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json'}
         });
        // const data = await response.json();
 
