@@ -27,17 +27,18 @@ function ListElement(props) {
 
   return (
     <div className="list-element-container">
-      <div className="left-container">
-        <Collapse>
-          <a href={props.apiUrl}>
-            <p>{props.apiUrl}</p>
-          </a>
-          <div>{JSON.stringify(JSON.parse(props.jsonExample))}</div>
-          <a href={props.docsUrl}>
-            <button>Link to documentation</button>
-          </a>
-        </Collapse>
+        <div className="left-container">
+          <Collapse>
+            <a href={props.apiUrl}>
+              <p>{props.apiUrl}</p>
+            </a>
+            <div>{JSON.stringify(JSON.parse(props.jsonExample))}</div>
+            <a href={props.docsUrl}>
+              <button className="docslink">Link to documentation</button>
+            </a>
+          </Collapse>   
       </div>
+      <button className="delete" onclick={props.handleDelete}>🚫</button>
       <div className="icons-container">
         <div className={props.get ? "getSuccess" : "getFail"}></div>
         <p>PING</p>

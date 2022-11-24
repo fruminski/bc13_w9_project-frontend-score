@@ -103,7 +103,7 @@ function App() {
           </div>
 
           <div className="add-button-container">
-            <AddButton handleClick={handleClick} />
+            <AddButton className="button" chandleClick={handleClick} />
           </div>
         </div>
 

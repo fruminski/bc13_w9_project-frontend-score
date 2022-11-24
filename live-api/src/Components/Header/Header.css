@@ -8,7 +8,7 @@
 }
 
 h1{
-    background-color: gray;
+    background-color: rgba(0, 0, 0, 0.321);
     width: 100vw;
     line-height: 10vh;
     color: white;
@@ -17,5 +17,5 @@ h1{
 
 .header-container p{
     width: 60vw;
-    background-color: gray;
+    color: white;
 }

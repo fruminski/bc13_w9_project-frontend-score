@@ -4,7 +4,7 @@ import "./Button.css";
 function AddButton(props) {
   return (
     <div>
-      <button className="button" onClick={props.handleClick}>
+      <button className={props.className} onClick={props.handleClick}>
         Add An API
       </button>
     </div>

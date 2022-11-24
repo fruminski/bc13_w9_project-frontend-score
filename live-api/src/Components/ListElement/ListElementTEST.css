@@ -1,3 +1,7 @@
+.button-parent {
+    display: flex;
+}
+
 .collapse-button {
     display: block;
     width: 100%;
@@ -8,7 +12,8 @@
   }
   
   .collapsed-content.expanded {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
   }
 
@@ -73,4 +78,16 @@
     height: 25px;
     border-radius: 50%;
     background-color: rgb(9, 255, 1);
+}
+
+.delete {
+    width: auto;
+    padding: 2px;
+    align-self: flex-start;
+}
+
+.docslink {
+    width: auto;
+    padding: 4px;
+    margin: 2px;
 }
