@@ -1,7 +1,13 @@
 import React from "react";
 import "./ListElementTEST.css";
 
+/* ListElement is a component displaying an individual API
+ * including its collapse/uncollapse button (within the Collapse Component below), the api docs URL,
+ * the sample json data, the delete button and GET/RESPONSE codes
+ */
 function ListElement(props) {
+  /* Collapse is a component availably within ListElement only
+   */
   const Collapse = ({ collapsed, children }) => {
     const [isCollapsed, setIsCollapsed] = React.useState(!collapsed);
 

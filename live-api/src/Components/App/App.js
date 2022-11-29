@@ -8,20 +8,31 @@ import AddApi from "../AddApi/AddApi";
 import AddButton from "../Button/Button";
 
 function App() {
+  /* The array of api objects */
   const [apiArray, setApiArray] = useState([]);
+  /* The variable on which a refresh is triggered.  Count might be more symantically called "refresh" */
   let [count, setCount] = React.useState(0);
+  /* A new api object for propagating before we push it into apiArray */
   const [newApi, setNewApi] = useState({});
+  /* These next three are state variables which are updated whenever their respective input field is changed.
+   * "Tags" is missing because it hasn't been implemented yet
+   */
   const [url, setUrl] = useState("");
   const [apiName, setApiName] = useState("");
   const [docsLink, setDocsLink] = useState("");
+  /* A variable to trigger the removal of an API entry.  Del would be set to the id of the entry in question */
   const [del, setDel] = useState("");
 
   useInterval(() => {
-    // Your custom logic here
+    /* This code block is executed periodically to refresh the page by manipulating "count" on which the next
+     * useEffect block is dependant */
     setCount(count + 1);
   }, 300000); // passing null instead of 1000 will cancel the interval if it is already running
 
   useEffect(() => {
+    /* If we're in this block of code then either it's time to update the page because the time period elapsed
+     * or something was added or deleted from the list
+     */
     async function getData() {
       const response = await fetch("http://localhost:3001/api/");
       const data = await response.json();
@@ -52,6 +63,9 @@ function App() {
     }
   }, [newApi]);
 
+  /* This code block gets executed whenever the del state variable changes.  This would happen if the ListOfApis component triggers
+   * the appropriate handleDelete function which is passed in as a member method of props
+   */
   useEffect(() => {
     async function deleteApi() {
       console.log('id:', del)
@@ -67,6 +81,7 @@ function App() {
     setCount(count+1)
   }, [del]);
 
+  /* Perhaps we could do away with all these functions and call the state handlers directly? */
   function handleDelete(id) {
     setDel(id);
     console.log(id);

@@ -1,6 +1,8 @@
 import "./ListOfApis.css";
 import ListElementTEST from "../ListElement/ListElementTEST";
 
+/* ListOfApis takes props.apiArray and calls ListElement on each (object) entry to build the list
+ */
 function ListOfApis(props) {
   return (
     <div className="list-container">
