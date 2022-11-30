@@ -59,7 +59,7 @@ function ListElement(props) {
         <div className={props.get ? "getSuccess" : "getFail"}></div>
         <p>GET</p>
         <div className={props.get ? "getSuccess" : "getFail"}></div>
-        <p>{props.response_code}</p>
+        <p>{props.response_code ? props.response_code : "???"}</p>
       </div>
     </div>
   );

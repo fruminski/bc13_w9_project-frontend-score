@@ -1,9 +1,9 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 
-    /* CSS HEX */
+  /* CSS HEX */
   --blue-bell: #a7a5c6ff;
   --cool-grey: #8797b2ff;
   --light-slate-gray: #6d8a96ff;
@@ -28,12 +28,12 @@
 
   align-items: center;
   text-align: center;
-  
 
-  
+
+
 }
 
-.add-container{
+.add-container {
   display: flex;
   width: 60vw;
   justify-content: space-between;
@@ -41,19 +41,19 @@
 
 }
 
-.inputs-container{
+.inputs-container {
   width: 65%;
 }
 
-.add-button-container{
+.add-button-container {
   width: 25%;
   height: 100%;
   align-self: center;
 }
 
-.add-and-list-container{
+.add-and-list-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  
+
 }
