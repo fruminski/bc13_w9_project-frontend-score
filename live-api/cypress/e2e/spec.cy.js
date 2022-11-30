@@ -1,10 +1,20 @@
+
+
 describe('Page loads', () => {
   it('passes', () => {
     cy.visit('http://localhost:3000')
   })
 })
 
+
+
 describe('Adding a broken API works', () => {
+
+  beforeEach(() => {
+    cy.task('defaults:db')
+    
+  })
+
   it('passes', () => {
     cy.get(':nth-child(1) > form > .input-container > .input')
     .type('https://weatherdbi.herokuapp.com/data/weather/london')
@@ -26,8 +36,11 @@ describe('Adding a broken API works', () => {
 
 describe('Deleting an API', () => {
   it('passes', () => {
-    cy.get('button#8.delete').click()
-    cy.wait(5000)
-    cy.get('.list-container').should('not.contain','Weather')
+   
+
+    // cy.get('.list-container').contains('Weather').invoke('attr', 'id').as('idvalue')
+    // cy.get('.delete').should('have.value', '@idvalue').click()
+    
+    
   })
 })
