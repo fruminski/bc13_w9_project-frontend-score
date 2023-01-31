@@ -34,7 +34,9 @@ function App() {
      * or something was added or deleted from the list
      */
     async function getData() {
-      const response = await fetch("http://localhost:3001/api/");
+      const response = await fetch(
+        "https://api-live-backend.onrender.com/api/"
+      );
       const data = await response.json();
       setApiArray(data.payload);
     }
@@ -49,17 +51,20 @@ function App() {
         const newApiJson = JSON.stringify(newApi);
         console.log(newApiJson);
         /* we post to the API with the data in the fields */
-        const response = await fetch("http://localhost:3001/api/", {
-          method: "POST",
-          body: newApiJson,
-          mode: "cors",
-          headers: {
-            "Content-Type": "application/json"
+        const response = await fetch(
+          "https://api-live-backend.onrender.com/api/",
+          {
+            method: "POST",
+            body: newApiJson,
+            mode: "cors",
+            headers: {
+              "Content-Type": "application/json"
+            }
           }
-        });
+        );
       }
       postData();
-      setCount(count+1)
+      setCount(count + 1);
     }
   }, [newApi]);
 
@@ -68,17 +73,20 @@ function App() {
    */
   useEffect(() => {
     async function deleteApi() {
-      console.log('id:', del)
-      const response = await fetch(`http://localhost:3001/api/${del}`, {
-        method: "DELETE",
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json"
+      console.log("id:", del);
+      const response = await fetch(
+        `https://api-live-backend.onrender.com/${del}`,
+        {
+          method: "DELETE",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json"
+          }
         }
-      });
+      );
     }
-    deleteApi(); 
-    setCount(count+1)
+    deleteApi();
+    setCount(count + 1);
   }, [del]);
 
   /* Perhaps we could do away with all these functions and call the state handlers directly? */
